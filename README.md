@@ -2,8 +2,8 @@
 
 A full-stack Sudoku game by **Xingchen Liu** and **Xinyi Hu**.
 
-**Live demo:** _TBD — will add after deploying to Render_
-**Demo video:** _TBD — will add after recording_
+**Live demo:** <https://sudoku-master-omdi.onrender.com/>
+**Demo video:** <https://youtu.be/6fo5WTtfFT8>
 
 ## What it does
 
@@ -44,7 +44,7 @@ Logged-out users can see every page but can't interact.
 See [`WRITEUP.md`](WRITEUP.md) for the rest of the writeup (challenges,
 assumptions, what we'd add next, time spent).
 
-## Credits
+## Collaborators
 
 - **Xingchen Liu** — liu.xingche@northeastern.edu
 - **Xinyi Hu** — hu.xinyi5@northeastern.edu
