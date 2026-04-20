@@ -1,0 +1,17 @@
+# Render Blueprint: deploy this app as a single Web Service.
+# After pushing this file, go to Render → New → Blueprint, point at your
+# GitHub repo, and set the MONGODB_URL + COOKIE_SECRET secrets in the dashboard.
+services:
+  - type: web
+    name: sudoku-master
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run server
+    envVars:
+      - key: MONGODB_URL
+        sync: false
+      - key: COOKIE_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production

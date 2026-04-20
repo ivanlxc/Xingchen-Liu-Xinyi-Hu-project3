@@ -1,0 +1,217 @@
+/* Game Page Styles */
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 540px;
+    margin: 0 auto 1.5rem;
+}
+
+.game-info-bar {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.difficulty-value {
+    font-weight: 600;
+}
+
+.difficulty-value.easy {
+    color: #00b894;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    background: var(--white);
+    padding: 0.6rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.congrats-message {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--success);
+    background: rgba(0, 210, 211, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sudoku Board */
+.sudoku-board {
+    display: grid;
+    gap: 4px;
+    background-color: var(--dark);
+    border: 4px solid var(--dark);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.sudoku-board-6 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+}
+
+.sudoku-board-9 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 540px;
+}
+
+.subgrid {
+    display: grid;
+    gap: 1px;
+    background-color: #b2bec3;
+}
+
+.subgrid-3x2 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.subgrid-3x3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+    background-color: var(--white);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    min-width: 0;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #edf2f7;
+}
+
+.cell-given {
+    font-weight: 700;
+    color: var(--dark);
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+.cell-given:hover {
+    background-color: #f0f1f3;
+}
+
+.cell-player {
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.cell-empty {
+    padding: 0;
+}
+
+.cell-error {
+    border: 2px solid var(--accent);
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.cell-hint {
+    background-color: rgba(254, 202, 87, 0.3);
+    border: 2px solid var(--warning);
+}
+
+.cell-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: var(--primary);
+    background: transparent;
+    -moz-appearance: textfield;
+    cursor: pointer;
+}
+
+.cell-input::-webkit-outer-spin-button,
+.cell-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cell-input:focus {
+    outline: none;
+    background-color: rgba(9, 132, 227, 0.1);
+}
+
+/* Game Controls */
+.game-controls {
+    max-width: 540px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
+
+.game-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sudoku-board-6 {
+        max-width: 85vw;
+    }
+
+    .sudoku-board-9 {
+        max-width: 90vw;
+    }
+
+    .game-header {
+        max-width: 85vw;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .game-controls {
+        max-width: 85vw;
+    }
+
+    .cell {
+        font-size: 1.2rem;
+    }
+
+    .cell-input {
+        font-size: 1.1rem;
+    }
+
+    .game-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .congrats-message {
+        max-width: 85vw;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cell {
+        font-size: 1rem;
+    }
+
+    .cell-input {
+        font-size: 0.9rem;
+    }
+}
